@@ -1,0 +1,42 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins',sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #660066;
+  }
+  
+  h2{
+    position: relative;
+    font-size: 14vw;
+    color: #660066;
+    -webkit-text-stroke:0.3vw #990066;
+    text-transform: uppercase;
+  }
+  
+  h2:before{
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: #cc0099;
+    -webkit-text-stroke:0vw #990066;
+    border-right: 2px solid #cc0099;
+    overflow: hidden;
+    animation: ani 6s infinite;
+  }
+
+  @keyframes ani {
+    0%,10%{
+      width: 0;
+    }
+    70%,90%{
+      width: 100%;
+    }
+  }
